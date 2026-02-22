@@ -1,0 +1,31 @@
+{
+    "name": "nwidart/fabric",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Fabric\\": "",
+            "Modules\\Fabric\\App\\": "app/",
+            "Modules\\Fabric\\Database\\Factories\\": "database/factories/",
+            "Modules\\Fabric\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Fabric\\Tests\\": "tests/"
+        }
+    }
+}

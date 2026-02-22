@@ -1,0 +1,9 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+/* Импорт стилей модуля Fabric */
+@import "../../Modules/Fabric/Resources/assets/sass/app.scss";
+
+body {
+    background-color: #f4f7f6;
+    padding-top: 20px;
+}
