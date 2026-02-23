@@ -23,6 +23,9 @@ docker compose up -d
 docker compose exec app php artisan module:migrate --seed Fabric
 ```
 
+## Перейдите по адресу http://localhost:8097/fabrics
+Порт из переменной `.env` `PROJECT_PORT_HTTP`
+
 ## Запуск тестов в Docker
 ```bash
 docker-compose exec app php artisan test --filter FabricApiTest
