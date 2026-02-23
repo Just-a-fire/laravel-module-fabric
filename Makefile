@@ -8,11 +8,14 @@ init: ## Полная инициализация проекта
 	@chmod +x docker/scripts/init.sh
 	@sh docker/scripts/init.sh
 	@$(MAKE) build
+	@docker compose run --rm app composer install
 	@$(MAKE) up
 	@echo "Waiting for containers to initialize..."
 	@for i in {5..1}; do echo -n "$$i.. "; sleep 1; done; echo "GO!"
+	@docker-compose exec app npm install
+	@docker-compose exec app npm run build
 # 	@docker compose exec app php artisan migrate --seed
-	@docker compose exec app php artisan module:migrate --seed Fabric
+	@docker compose exec app php artisan module:migrate --seed Fabric --force
 	@echo "Project is ready at http://localhost:$$(grep PROJECT_PORT_HTTP .env | cut -d '=' -f 2)"
 
 # Сборка с учетом APP_ENV из .env
