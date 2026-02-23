@@ -7,8 +7,8 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/js/app.js',
-                'Modules/Fabric/Resources/assets/sass/app.scss',
-                'Modules/Fabric/Resources/assets/js/app.js'
+                'Modules/Fabric/resources/assets/sass/app.scss',
+                'Modules/Fabric/resources/assets/js/app.js'
             ],
             refresh: true,
         }),
